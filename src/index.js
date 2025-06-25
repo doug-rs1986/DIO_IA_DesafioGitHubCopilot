@@ -67,29 +67,29 @@ function validateCreditCard(cardNumber) {
     };
 }           
 
-// /**
-//  * Processes the credit card information from an image (simulated)
-//  * In a real implementation, this would use OCR to extract data from base.jpg
-//  * @param {string} imagePath - Path to the credit card image
-//  * @returns {Object} Credit card information including brand
-//  */
-// function processCreditCardFromImage(imagePath) {
-//     // In a real implementation, we would:
-//     // 1. Use an OCR library to extract text from the image
-//     // 2. Identify and extract the credit card number
-//     // 3. Validate the number and determine the brand
+/**
+ * Processes the credit card information from an image (simulated)
+ * In a real implementation, this would use OCR to extract data from base.jpg
+ * @param {string} imagePath - Path to the credit card image
+ * @returns {Object} Credit card information including brand
+ */
+function processCreditCardFromImage(imagePath) {
+    // In a real implementation, we would:
+    // 1. Use an OCR library to extract text from the image
+    // 2. Identify and extract the credit card number
+    // 3. Validate the number and determine the brand
     
-//     console.log(`Processing credit card image from: ${imagePath}`);
+    console.log(`Processing credit card image from: ${imagePath}`);
     
-//     // This is a placeholder for OCR functionality
-//     // In a real application, you would replace this with actual OCR code
+    // This is a placeholder for OCR functionality
+    // In a real application, you would replace this with actual OCR code
     
-//     return {
-//         message: `To implement actual OCR functionality, you would need to use a library like Tesseract.js or a cloud OCR service.`,
-//         imagePath: imagePath,
-//         note: "The validateCreditCard function above can be used once you extract the card number from the image."
-//     };
-// }
+    return {
+        message: `To implement actual OCR functionality, you would need to use a library like Tesseract.js or a cloud OCR service.`,
+        imagePath: imagePath,
+        note: "The validateCreditCard function above can be used once you extract the card number from the image."
+    };
+}
 
 // Example usage
 const exampleCard = "5379 5625 8396 2700"; 
@@ -97,11 +97,11 @@ let exampleCardNumber = exampleCard.trim();
 const validationResult = validateCreditCard(exampleCardNumber);
 console.log(validationResult);
 
-// // Example of how you would use the image processing function
-// const imageProcessingResult = processCreditCardFromImage("base.jpg");
-// console.log(imageProcessingResult);
+// Example of how you would use the image processing function
+const imageProcessingResult = processCreditCardFromImage("base.jpg");
+console.log(imageProcessingResult);
 
 module.exports = {
-    validateCreditCard
-//    , processCreditCardFromImage
+    validateCreditCard,
+    processCreditCardFromImage
 };
